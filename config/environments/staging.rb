@@ -10,10 +10,10 @@ Rails.application.configure do
 	config.assets.raise_runtime_errors = true
 
   # URI
-  SITE_URI = 'https://protected-chamber-9431.herokuapp.com'
+  SITE_URI = 'https://obscure-meadow-8478.herokuapp.com'
   
   # APP NAME
-  APP_NAME = 'My Golf Club'
+  APP_NAME = 'WAC'
 
   # PAGE TITLE
   TITLE = "#{APP_NAME} [Staging]"
@@ -23,16 +23,5 @@ Rails.application.configure do
 
   # ACCESS
   ACCESS = ['end-user','admin']
-
-  # TEE's
-  TEE = ['black','blue','gold','white','yellow','red']
-
-  Instagram.configure do |config|
-
-  	config.client_id = 'aa32ba2129914b28b9e27c34804cf288'
-
-  	config.client_secret = '5a836017b44a4e85b0bf2b309562c455'
-
-  end
 
 end
