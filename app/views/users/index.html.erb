@@ -1,0 +1,43 @@
+<ol class="breadcrumb">
+  <li>
+    <%= link_to 'Home',root_path %>
+  </li>
+  <li class="active">Members</li>
+</ol>
+
+<tabset>
+
+  <tab heading="Members">
+
+    <table class="table table-striped table-hover table-bordered outside no-top">
+      
+      <thead>
+        <tr>
+          <th>Gamertag</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th colspan="2">
+            <a href="<%= new_user_path %>" class="btn btn-success btn-sm FULL">
+              <span class="glyphicon glyphicon-plus"></span> Add User
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @users.each do |user| %>
+        <tr>
+          <td><%= user.gamertag %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td width="1"><%= link_to 'Edit', edit_user_path(user),class: 'btn btn-warning btn-sm' %></td>
+          <td width="1"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-danger btn-sm' %></td>
+        </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+
+  </tab>
+
+</tabset>

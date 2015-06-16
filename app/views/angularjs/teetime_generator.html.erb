@@ -1,0 +1,42 @@
+<form name="teetime_form" ng:submit="submit()">
+
+	<h3>Generate Teetimes</h3>
+
+	<div class="form-group">
+		<label>First&nbsp;Teetime</label>
+		<timepicker ng-model="generator.start_time" hour-step="1" minute-step="5" show-meridian="true"></timepicker>
+	</div>
+
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" ng:model="generator.override" /> Override locked teetimes
+		</label>
+	</div>
+
+	<div class="form-group">
+		<label>Spacing:</label>
+		<h-number ng:model="generator.spacing" singular="Minute" plural="Minutes" min="0" max="60" step="1" label="Minutes"></h-number>
+		<input type="hidden" ng:model="generator.spacing" name="spacing" required />
+	</div>
+
+	<div class="form-group">
+		<label>Per&nbsp;Group</label>
+		<h-number ng:model="generator.per_group" singular="Minute" plural="Minutes" min="1" max="10" step="1"></h-number>
+		<input type="hidden" ng:model="generator.per_group" name="per_group" required />
+	</div>
+
+	<div class="form-group">
+		<label>Start&nbsp; Type:</label>
+		<select class="form-control" ng:model="generator.type" name="type" required>
+			<option value="sequential">Sequential</option>
+			<option value="shotgun">Shotgun</option>
+			<option value="Double">Double</option>
+		</select>
+	</div>
+
+	<div class="clearfix">
+		<button class="btn btn-default">Generate</button>
+		<a href="" class="btn btn-danger pull-right" ng:click="close()">Cancel</a>
+	</div>
+
+</form>

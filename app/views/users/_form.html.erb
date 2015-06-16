@@ -1,0 +1,43 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div class="alert alert-danger">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :gamertag %>
+    <%= f.text_field :gamertag,class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name,class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email,class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password,class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation,class: 'form-control' %>
+  </div>
+  <% if is_admin? %>
+  <div class="form-group">
+    <%= f.label :access %>
+    <%= f.number_field :access,class: 'form-control' %>
+  </div>
+  <% end %>
+  <div class="actions">
+    <%= f.submit 'Submit',class: 'btn btn-default' %>
+  </div>
+<% end %>

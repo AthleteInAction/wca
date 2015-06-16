@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  course_id: 1
+  tee: MyString
+  holes: 1
+  slope: 1
+  rating: 9.99
+  pars: MyString
+  yards: MyString
+  handicaps: MyString
+
+two:
+  user_id: 1
+  course_id: 1
+  tee: MyString
+  holes: 1
+  slope: 1
+  rating: 9.99
+  pars: MyString
+  yards: MyString
+  handicaps: MyString

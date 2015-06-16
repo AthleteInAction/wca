@@ -1,0 +1,45 @@
+<table class="table table-bordered table-striped modal-scorecard">
+
+	<tbody>
+		<tr>
+			<td colspan="19" class="active golfer">
+				<a href="#">
+					{{teetime.name}}&nbsp;<span class="badge"><span ng:if="toPar(scores)>0">+</span>{{toPar(scores)}}</span>
+				</a>
+			</td>
+		</tr>
+		<tr class="capitalize {{round.scorecard.tee}}">
+			<td>{{round.scorecard.tee}}</td>
+			<td class="text-center" ng:repeat="i in [].times(round.scorecard.holes) track by $index">{{round.scorecard.yards[$index]}}</td>
+		</tr>
+		<tr class="info">
+			<td class="text-muted">Handicap</td>
+			<td class="text-center text-muted" ng:repeat="i in [].times(round.scorecard.holes) track by $index">{{round.scorecard.handicaps[$index]}}</td>
+		</tr>
+		<tr class="white">
+			<td class="text-muted">Hole</td>
+			<td class="text-center" ng:repeat="i in [].times(round.scorecard.holes) track by $index"><b>{{$index+1}}</b></td>
+		</tr>
+		<tr class="success">
+			<td class="text-muted">Par</td>
+			<td class="text-center text-muted" ng:repeat="i in [].times(round.scorecard.holes) track by $index">{{round.scorecard.pars[$index]}}</td>
+		</tr>
+		<tr class="white">
+			<td class="text-muted">Score</td>
+			<td class="text-center no-pad" ng:repeat="i in [].times(round.scorecard.holes) track by $index">
+				<input type="text" class="{{scoreType(round.scorecard.pars[$index],scores[$index].score)}}" ng:model="scores[$index].score" onstop="scores[$index].save()" />
+			</td>
+		</tr>
+	</tbody>
+
+</table>
+
+<div class="clearfix">
+
+	<span class="btn btn-primary">
+		<span class="badge">{{addScores(0,9)}}&nbsp;/&nbsp;{{round.scorecard.pars.total(0,9)}}</span><span ng:if="round.scorecard.holes > 9">&nbsp;/&nbsp;<span class="badge">{{addScores(9)}}&nbsp;/&nbsp;{{round.scorecard.pars.total(9)}}</span>&nbsp;&nbsp;&nbsp;</span>Score:&nbsp;<span class="badge">{{addScores(0)}}&nbsp;/&nbsp;{{round.scorecard.pars.total(0)}}</span>
+	</span>
+
+	<button class="btn btn-danger btn-sm pull-right" ng:click="close()"><%= icon 'remove-circle' %>&nbsp;Close</button>
+
+</div>

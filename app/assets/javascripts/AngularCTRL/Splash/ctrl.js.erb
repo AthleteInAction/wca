@@ -1,0 +1,30 @@
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// APPLICATION !!!!!!! APPLICATION !!!!!!! APPLICATION !!!!!!! APPLICATION !!!!!!! APPLICATION !!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+var Ctrl = ['$scope','API',
+	function($scope,API){
+
+		var scope = $scope;
+
+		scope.timezone = jstz.determine();
+
+		JP('CTRL');
+
+		scope.current_user = current_user;
+
+		scope.API = API;
+
+		scope.moment = function(string,format){
+			return moment.tz(string,scope.timezone.name());
+		};
+
+		scope.zone = function(t){
+			return zone(t);
+		};
+
+		scope.times = function(n){
+			return new Array(parseInt(n));
+		};
+
+	}
+];

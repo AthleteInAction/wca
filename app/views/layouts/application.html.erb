@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= TITLE %></title>
+	<script type="text/javascript">var current_user = <%= current_user.to_json(except: :password_digest).html_safe %>;</script>
+	<link rel="shortcut icon" href="<%= asset_path 'logo.png' %>" />
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body ng:controller="Ctrl">
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+
+			<div class="navbar-header">
+				<div class="container-fluid">
+					<%= link_to dashboard_path,class: 'navbar-brand' do %>
+					<span><%= image_tag 'logo.png',height: 20 %></span>
+					<% end %>
+				</div>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li></li>
+					<li><%= link_to 'Members',users_path %></li>
+					<li><%= link_to 'Strategy',strategy_path %></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><%= link_to current_user.email,current_user %></li>
+					<li><%= link_to logout_path do %><%= icon 'log-out' %><% end %></li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>
+
+	<div class="container" ng:show="loaded">
+
+		<% flash.each do |type,message| %>
+		<alert type="<%= type %>"><%= message %></alert>
+		<% end %>
+
+		<%= yield %>
+
+	</div>
+
+</body>
+</html>

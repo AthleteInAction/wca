@@ -1,0 +1,59 @@
+<div class="spacer"></div>
+
+<div class="container">
+
+  <% flash.each do |type,message| %>
+  <alert type="<%= type %>"><%= message %></alert>
+  <% end %>
+
+  <div class="row">
+
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+      <div class="spacer"></div>
+      <div class="panel panel-default">
+
+        <div class="panel-heading">
+          <b>Sign Up:</b>
+        </div>
+
+        <div class="panel-body">
+
+          <%= form_for @user,url: signup_path do |f| %>
+          <div class="form-group<%= ' has-error' if @user.errors[:gamertag].present? %>">
+            <%= f.text_field :gamertag,class: 'form-control input-lg',placeholder: 'Gamertag' %>
+            <% if @user.errors[:gamertag].present? %>
+            <div class="alert alert-danger forever sm"><%= "Name #{@user.errors[:gamertag].first}" %></div>
+            <% end %>
+          </div>
+          <div class="form-group<%= ' has-error' if @user.errors[:name].present? %>">
+            <%= f.text_field :name,class: 'form-control input-lg',placeholder: 'Full Name' %>
+            <% if @user.errors[:name].present? %>
+            <div class="alert alert-danger forever sm"><%= "Name #{@user.errors[:name].first}" %></div>
+            <% end %>
+          </div>
+          <div class="form-group<%= ' has-error' if @user.errors[:email].present? %>">
+            <%= f.text_field :email,class: 'form-control input-lg',placeholder: 'Email' %>
+            <% if @user.errors[:email].present? %>
+            <div class="alert alert-danger forever sm"><%= "Email #{@user.errors[:email].first}" %></div>
+            <% end %>
+          </div>
+          <div class="form-group<%= ' has-error' if @user.errors[:password].present? %>">
+            <%= f.password_field :password,class: 'form-control input-lg',placeholder: 'New Password' %>
+            <% if @user.errors[:password].present? %>
+            <div class="alert alert-danger forever sm"><%= "Password #{@user.errors[:password].first}" %></div>
+            <% end %>
+          </div>
+          <div class="actions">
+            <%= f.submit 'Sign Up',class: 'btn btn-primary btn-lg FULL' %>
+          </div>
+          <% end %>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-3"></div>
+
+  </div>
