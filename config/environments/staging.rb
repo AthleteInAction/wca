@@ -13,7 +13,7 @@ Rails.application.configure do
   SITE_URI = 'https://obscure-meadow-8478.herokuapp.com'
   
   # APP NAME
-  APP_NAME = 'WAC'
+  APP_NAME = 'WCA'
 
   # PAGE TITLE
   TITLE = "#{APP_NAME} [Staging]"
