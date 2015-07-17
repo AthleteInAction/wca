@@ -1,0 +1,73 @@
+<style>
+#myScrollspy {
+	position: relative; 
+	top: 50px;
+	height: 200px;
+	overflow: auto;
+	font-size: 28px;
+}
+#section1 {color: #fff; background-color: #1E88E5;}
+#section2 {color: #fff; background-color: #673ab7;}
+#section3 {color: #fff; background-color: #ff9800;}
+#section41 {color: #fff; background-color: #00bcd4;}
+#section42 {color: #fff; background-color: #009688;}
+</style>
+<ol class="breadcrumb">
+	<li>
+		<%= link_to 'Home',root_path %>
+	</li>
+	<li class="active">Strategy</li>
+</ol>
+
+<div class="row">
+	<div class="col-md-3">
+		<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix testz">
+						<ul class="nav bs-docs-sidenav">
+							<li><a href="#section1">Section 1</a></li>
+							<li><a href="#section2">Section 2</a></li>
+							<li><a href="#section3">Section 3</a></li>
+						</ul>
+		</nav>
+
+	</div>
+	<div class="col-md-9">
+
+		<div data-spy="scroll" data-target=".testz" data-offset="12" id="myScrollspy">
+			<div id="section1">
+				<div class="container-fluid">
+					<h1>Section 1</h1>
+					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+				</div>
+			</div>
+			<div id="section2">
+				<div class="container-fluid">
+					<h1>Section 2</h1>
+					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+				</div>  
+			</div>
+			<div id="section3">
+				<div class="container-fluid">
+					<h1>Section 3</h1>
+					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+				</div>  
+			</div>
+			<div id="section41">
+				<div class="container-fluid">
+					<h1>Section 4 Submenu 1</h1>
+					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+				</div>
+			</div>
+			<div id="section42">
+				<div class="container-fluid">
+					<h1>Section 4 Submenu 2</h1>
+					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+				</div>  
+			</div>
+		</div>
+	</div>
+</div>
