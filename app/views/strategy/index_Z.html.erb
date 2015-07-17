@@ -1,73 +1,76 @@
-<style>
-#myScrollspy {
-	position: relative; 
-	top: 50px;
-	height: 200px;
-	overflow: auto;
-	font-size: 28px;
-}
-#section1 {color: #fff; background-color: #1E88E5;}
-#section2 {color: #fff; background-color: #673ab7;}
-#section3 {color: #fff; background-color: #ff9800;}
-#section41 {color: #fff; background-color: #00bcd4;}
-#section42 {color: #fff; background-color: #009688;}
-</style>
 <ol class="breadcrumb">
-	<li>
-		<%= link_to 'Home',root_path %>
-	</li>
-	<li class="active">Strategy</li>
+  <li>
+    <%= link_to 'Home',root_path %>
+  </li>
+  <li class="active">Strategy</li>
 </ol>
 
-<div class="row">
-	<div class="col-md-3">
-		<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix testz">
-						<ul class="nav bs-docs-sidenav">
-							<li><a href="#section1">Section 1</a></li>
-							<li><a href="#section2">Section 2</a></li>
-							<li><a href="#section3">Section 3</a></li>
+<div class="list-group">
+	<div class="list-group-item">
+		<h2 class="list-group-item-heading">Defensive Zone Coverage</h4>
+		<div class="spacer"></div>
+
+		<div class="row">
+			<div class="col-md-6">
+
+				<tabset>
+					
+					<tab heading="Center">
+
+						<div class="spacer"></div>
+
+						<p>The Center has the most area to cover.  Usually they can match up with the other Center and stay "man to man" with them where ever they go.  The rest of the Defense (especially the wings) needs to recognize when this is happening so that they keep the center of the ice guarded.</p>
+
+						<p>If the center stays in the middle of the ice, then they need to watch where the defenders go and help to fill in the open areas.  If the center takes the puck behind the net and the defensive center does not apply pressure, then the defender will apply pressure and the center will guard the middle.</p>
+
+						<p>When the puck is in the middle of the ice, the center can assist the defensive player putting pressure on the puck but needs to keep in check where the offensive center is.</p>
+
+						<p><b>Do not</b> just chase after the puck.  This will cause players to get confused on who they need to guard.</p>
+
+					</tab>
+
+					<tab heading="Defensemen">
+
+						<div class="spacer"></div>
+
+						<p>The key to the 2 defender's success is balance.</p>
+
+						<ul>
+							<li>If one is on the left side, the other should be on the right.</li>
+							<li>If one is in the corner or behind the net, the other one should be in front of the net.</li>
+							<li>If the left defender is playing the person with the puck and they go behind the net and to the right side, the right side defender should move over to the left side.</li>
 						</ul>
-		</nav>
 
-	</div>
-	<div class="col-md-9">
+						<p>While the play is near the boards, the offside defender should be watching out for:</p>
 
-		<div data-spy="scroll" data-target=".testz" data-offset="12" id="myScrollspy">
-			<div id="section1">
-				<div class="container-fluid">
-					<h1>Section 1</h1>
-					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-				</div>
+						<ul>
+							<li>Players that setup in the crease</li>
+							<li>Players trying to sneak in "backdoor"</li>
+						</ul>
+						<p>Defenders should be talking when ever possible letting the other know "I got the puck" or "watch backdoor"</p>
+
+						<p><b>Do not</b> chase the puck up the wall to the blue line.</p>
+
+					</tab>
+
+					<tab heading="Wings">
+
+						<div class="spacer"></div>
+
+						<p>The wings need to stay high and guard the 2 defenders from the other team.  Typically they stay high near the blue line but will sometimes sneak down or towards the middle when the puck is on the opposite side of the play.</p>
+
+						<p><b>Do not</b> chase a defender past the blue line if they do not have the puck.
+						<b>Do not</b> get sucked down to the redline or the corners trying to help the defenders with a play. That leaves your man wide open for a blast back at the blue line.</p>
+
+					</tab>
+
+				</tabset>
+
 			</div>
-			<div id="section2">
-				<div class="container-fluid">
-					<h1>Section 2</h1>
-					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-				</div>  
-			</div>
-			<div id="section3">
-				<div class="container-fluid">
-					<h1>Section 3</h1>
-					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-				</div>  
-			</div>
-			<div id="section41">
-				<div class="container-fluid">
-					<h1>Section 4 Submenu 1</h1>
-					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-				</div>
-			</div>
-			<div id="section42">
-				<div class="container-fluid">
-					<h1>Section 4 Submenu 2</h1>
-					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-					<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-				</div>  
+			<div class="col-md-6">
+				<%= image_tag 'd-zone-coverage.png',class: 'img-responsive' %>
 			</div>
 		</div>
 	</div>
+
 </div>

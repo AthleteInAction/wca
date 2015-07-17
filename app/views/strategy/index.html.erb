@@ -1,75 +1,164 @@
 <ol class="breadcrumb">
-  <li>
-    <%= link_to 'Home',root_path %>
-  </li>
-  <li class="active">Strategy</li>
+	<li>
+		<%= link_to 'Home',root_path %>
+	</li>
+	<li class="active">Strategy</li>
 </ol>
 
 <div class="list-group">
+
 	<div class="list-group-item">
-		<h2 class="list-group-item-heading">Defensive Zone Coverage</h4>
+
+		<h2 class="list-group-item-heading">Building Speed</h2>
 		<div class="spacer"></div>
 
-		<div class="row">
-			<div class="col-md-6">
+		<p>Building team speed starts with your defensemen working together to create a breakout with momentum.</p>
 
-				<tabset>
-					
-					<tab heading="Center">
-
-						<div class="spacer"></div>
-
-						<p>The Center has the most area to cover.  Usually they can match up with the other Center and stay "man to man" with them where ever they go.  The rest of the Defense (especially the wings) needs to recognize when this is happening so that they keep the center of the ice guarded.</p>
-
-						<p>If the center stays in the middle of the ice, then they need to watch where the defenders go and help to fill in the open areas.  If the center takes the puck behind the net and the defensive center does not apply pressure, then the defender will apply pressure and the center will guard the middle.</p>
-
-						<p>When the puck is in the middle of the ice, the center can assist the defensive player putting pressure on the puck but needs to keep in check where the offensive center is.</p>
-
-						<p><b>Do not</b> just chase after the puck.  This will cause players to get confused on who they need to guard.</p>
-
-					</tab>
-
-					<tab heading="Defensemen">
-
-						<div class="spacer"></div>
-
-						<p>The key to the 2 defender's success is balance.</p>
-
-						<ul>
-							<li>If one is on the left side, the other should be on the right.</li>
-							<li>If one is in the corner or behind the net, the other one should be in front of the net.</li>
-							<li>If the left defender is playing the person with the puck and they go behind the net and to the right side, the right side defender should move over to the left side.</li>
-						</ul>
-
-						<p>While the play is near the boards, the offside defender should be watching out for:</p>
-
-						<ul>
-							<li>Players that setup in the crease</li>
-							<li>Players trying to sneak in "backdoor"</li>
-						</ul>
-						<p>Defenders should be talking when ever possible letting the other know "I got the puck" or "watch backdoor"</p>
-
-						<p><b>Do not</b> chase the puck up the wall to the blue line.</p>
-
-					</tab>
-
-					<tab heading="Wings">
-
-						<div class="spacer"></div>
-
-						<p>The wings need to stay high and guard the 2 defenders from the other team.  Typically they stay high near the blue line but will sometimes sneak down or towards the middle when the puck is on the opposite side of the play.</p>
-
-						<p><b>Do not</b> chase a defender past the blue line if they do not have the puck.
-						<b>Do not</b> get sucked down to the redline or the corners trying to help the defenders with a play. That leaves your man wide open for a blast back at the blue line.</p>
-
-					</tab>
-
-				</tabset>
-
-			</div>
-			<div class="col-md-6">
-				<%= image_tag 'd-zone-coverage.png',class: 'img-responsive' %>
-			</div>
-		</div>
 	</div>
+
+	<div class="list-group-item">
+
+		<h2 class="list-group-item-heading">Basic D to D Underneath Breakout</h2>
+
+		<p>
+			<%= link_to asset_path('d-back-pass.gif'),target: '_blank' do %>
+			<%= image_tag 'd-back-pass.gif',class: 'img-responsive' %>
+			<% end %>
+		</p>
+
+		<h4>Concept</h4>
+
+		<p>This first example starts in your own d-zone with a significant amount of time for the defensemen to work with. The puck carrying defenseman starts by moving up the ice at an angle drawing the defense to one side of the ice. The supporting defenseman slides underneath the puck carrier creating and angle for a "reverse pass". Once the "reverse pass" is completed, with the defense drawn to one side of the ice, this should give the supporting defensemen time, speed, and momentum to make a play up the ice.</p>
+
+		<tabset>
+
+			<tab>
+				
+				<tab-heading>Defensemen</tab-heading>
+				
+				<table class="table table-bordered no-top">
+					<tbody>
+						<tr>
+							<td>
+
+								<p>The key is for both defensemen to support eachother. As one d-man starts up the ice, looking for options, the other d-man should always create an option to reverse the puck and start the breakout in the opposite direction.</p>
+
+								<p>In the above example, yellow starts up the ice, at an angle, drawing the defense to one side of the ice. He then reverses the puck to teal, which gives the entire breakout time to build momentum up the ice.</p>
+
+								<div class="row">
+									
+									<div class="col-md-6">
+										<h4>Options:</h4>
+										<ul>
+											<li>Pass to a forward who has time to make a play. (Do not pass your forwards into a big hit which can cause a bad turnover)</li>
+											<li>Skate the puck into the zone, inheriting the risk that if you turn it over it will most likely end up in an odd man opportunity, or breakaway the other way.</li>
+											<li>Dump the puck into the zone</li>
+											<li>Reverse the puck to your D partner to start the breakout in the opposite direction</li>
+										</ul>
+									</div>
+
+									<div class="col-md-6">
+										<h4>Expectations:</h4>
+										<ul>
+											<li>Put your forwards in positions to make plays, not turnovers.</li>
+											<li>If you are going to dump the puck in, do it high at the redline. This will allow the forwards to keep their speed into the zone. If you skate pass the redline, it will be presumed that you are skating into the zone, or rimming the puck around the boards.
+											</li>
+										</ul>
+									</div>
+
+								</div>
+
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</tab>
+
+			<tab>
+				
+				<tab-heading>Center</tab-heading>
+				
+				<table class="table table-bordered no-top">
+					<tbody>
+						<tr>
+							<td>
+
+								<p>The center will be skating on 45&deg; lines up the ice presenting himself as an option for the defensemen.</p>
+
+								<div class="row">
+									
+									<div class="col-md-6">
+										<h4>Options:</h4>
+										<ul>
+											<li>Direct pass to either wing</li>
+											<li>Shoot the puck on net creating a wide rebound for the wings to retrieve</li>
+											<li>Saucer pass wide for the wings to retrieve</li>
+											<li>Skate the puck deep into the zone</li>
+										</ul>
+									</div>
+
+									<div class="col-md-6">
+										<h4>Expectations:</h4>
+										<ul>
+											<li><b>Get the puck deep into the zone</b>. Turning the puck over on entry is unacceptable</li>
+											<li>The defensemen must trust that you are not going to turn the puck over upon entry so they can join in the offensive zone</li>
+										</ul>
+									</div>
+
+								</div>
+
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</tab>
+
+			<tab>
+				
+				<tab-heading>Wings</tab-heading>
+				
+				<table class="table table-bordered no-top">
+					<tbody>
+						<tr>
+							<td>
+
+								<p>The wings need to stay wide to keep the defense spread out. Be sure not to get too close to the blue line before receiving the puck from your defensemen. This will give you a buffer to keep the opposing defensemen from aggressively stepping up on you. Once the puck is advanced to a forward, get your feet moving into the zone.</p>
+
+								<div class="row">
+									
+									<div class="col-md-6">
+										<h4>Options:</h4>
+										<ul>
+											<li>Direct pass to the wing or center</li>
+											<li>Drop pass to incoming defensemen</li>
+											<li>Shoot the puck on net creating a wide rebound for the wing or center to retrieve</li>
+											<li>Rim the puck around the boards</li>
+											<li>Skate the puck deep into the zone</li>
+										</ul>
+									</div>
+
+									<div class="col-md-6">
+										<h4>Expectations:</h4>
+										<ul>
+											<li><b>Get the puck deep into the zone</b>. Turning the puck over on entry is unacceptable</li>
+											<li>Be there when the opposite wing rims the puck around the boards.</li>
+											<li>The defensemen must trust that you are not going to turn the puck over upon entry so they can join in the offensive zone</li>
+										</ul>
+									</div>
+
+								</div>
+
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</tab>
+
+		</tabset>
+		
+	</div>
+
 </div>
