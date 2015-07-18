@@ -62,18 +62,92 @@ ul.nav-tabs.sp.affix-top {
 
 <div class="row">
 
-	<div class="col-md-3" id="myScrollspy">
-
-		<ul class="nav nav-tabs nav-stacked sp" data-offset-top="100" data-spy="affix">
-			<li class="active"><a href="#entry">Entry</a></li>
-			<li><a href="#oddmanrush">Odd Man Rush</a></li>
-			<li><a href="#powerplay">Powerplay</a></li>
-			<li><a href="#breakout">Breakout</a></li>
-		</ul>
-
-	</div>
-
 	<div class="col-md-9">
+
+		<div id="forecheck">
+			<div class="list-group">
+
+				<div class="list-group-item active">
+
+					<h2 class="list-group-item-heading">Forecheck</h2>
+
+				</div>
+
+				<div class="list-group-item">
+
+					<h2 class="list-group-item-heading"></h2>
+
+					<p>The purpose of the forecheck is to control the ice (mainly the nuetral zone), <b>NOT</b> to take the puck from players. When you have control of the ice and dictate the opposition's breakout, it forces them to take risks, which will lead to turnovers.</p>
+
+					<tabset>
+
+						<tab>
+
+							<tab-heading>Basic 1-2-2</tab-heading>
+
+							<table class="table table-bordered no-top">
+								<tbody>
+									<tr>
+										<td>
+
+											<div align="center">
+												<%= link_to asset_path('forecheck-1-2-2-A.gif'),target: '_blank' do %>
+												<%= image_tag 'forecheck-1-2-2-A.gif',class: 'img-responsive' %>
+												<% end %>
+											</div>
+
+											<h4>First Man In</h4>
+
+											<p>The first man in will try to dictate which side of the ice the puck will come up, allowing his teammates to read the play and take away options.</p>
+
+											<p><b>DO NOT</b> chase the player behind the net, unless you can keep inside position on him.</p>
+
+											<p>The first animation shows how chasing behind the net leads to 3 passing options for D #1. The second animation shows green properly waiting for D #1 to choose a side, then angling D #1 up that side of the ice, allowing his teammates the key on that. As a result, D #1 now only has one direct option.</p>
+
+											<p>Notice something as simple as chasing behind the net and losing position gives the opposition every option they could hope for up the ice, leading to easy entry.</p>
+
+											<p>Also notice the inside out angle green takes to eliminate a pass back across the ice. This angle takes away the D to D pass and makes the long pass up to FWD #4 difficult and risky, all while forcing the play up the left.</p>
+
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</tab>
+
+					</tabset>
+
+					<div class="row">
+
+						<div class="col-md-6">
+
+							<h4>Goals</h4>
+							<ul>
+								<li>Dictate where the puck goes</li>
+								<li>Trap the puck to one side of the ice</li>
+								<li>Force the opposition to take risks to create a clean breakout</li>
+								<li>Force the opposition to dump the puck into spots that are easy to reteive</li>
+							</ul>
+
+						</div>
+
+						<div class="col-md-6">
+
+							<h4>Epectations</h4>
+							<ul>
+								<li><b>DO NOT</b> chase the puck</li>
+								<li>Be aware your positioning to avoid taking penalties outside of our D zone</li>
+								<li>Remember, they can't score from their zone <b>OR</b> the nuetral zone</li>
+							</ul>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
 
 		<div id="entry">
 			<div class="list-group">
@@ -611,3 +685,19 @@ ul.nav-tabs.sp.affix-top {
 		</div>
 
 	</div>
+
+	<div class="col-md-3 hidden-xs hidden-sm" id="myScrollspy">
+
+		<div class="container-fluid">
+			<ul class="nav nav-tabs nav-stacked sp" data-offset-top="100" data-spy="affix">
+				<li class="active"><a href="#forecheck">Forecheck</a></li>
+				<li><a href="#entry">Entry</a></li>
+				<li><a href="#oddmanrush">Odd Man Rush</a></li>
+				<li><a href="#powerplay">Powerplay</a></li>
+				<li><a href="#breakout">Breakout</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+</div>
