@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
 
 			user.increment! :login_count
 
-			redirect_to root_url, flash: {success: "Welcome #{params[:email]}!"}
+			redirect_to root_url, flash: {success: "Welcome #{current_user.gamertag}!"}
 
 		else
 
