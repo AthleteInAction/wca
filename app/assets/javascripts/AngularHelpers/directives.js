@@ -9,7 +9,7 @@ App.directive('scrollSpy', function($timeout){
             scope.$watch(attr.scrollSpy, function(value) {
                 $timeout(function() { 
                   elem.scrollspy('refresh', { "offset" : offset})
-                }, 1);
+              }, 1);
             }, true);
         }
     }

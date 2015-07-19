@@ -61,3 +61,20 @@ App.directive('shiftnewline',function(){
 
     }
 });
+
+App.directive('animate',function(){
+    return {
+
+        restrict: 'C',
+        link: function(scope,element,attrs){
+    
+            element.bind('mouseover',function(event){
+
+                
+    
+            });
+    
+        }
+
+    }
+});
