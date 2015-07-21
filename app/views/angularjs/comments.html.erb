@@ -1,0 +1,44 @@
+<div class="list-group">
+
+	<div class="list-group-item grey">
+
+		<h4 class="list-group-item-heading">Comments</h4>
+
+	</div>
+
+	<div class="list-group-item">
+
+		<div class="form-group">
+			<textarea class="form-control" ng:model="comment.body" onenter="submitComment(section)"></textarea>
+			<h6 class="text-muted">Shift + Enter for new line</h6>
+		</div>
+
+		<button class="btn btn-default" ng:click="submitComment(section)">Submit</button>
+
+	</div>
+
+	<div class="list-group-item comments" ng:if="comments.length > 0">
+
+		<table class="table">
+
+			<tbody>
+				<tr class="comments" ng:repeat="comment in comments | orderBy:'-id'">
+					<td>
+
+						<h4><span class="label" ng:class="{'label-success':current_user.id==comment.author.id,'label-primary':current_user.id!=comment.author.id}">{{comment.author.gamertag}}</span></h4>
+
+						<p ng-bind-html="comment.body_html"></p>
+
+						<h6 class="text-muted">{{comment.created_at_clean}}</h6>
+
+						<button class="btn btn-danger btn-xs" ng:if="current_user.id==comment.author.id" ng:click="deleteComment(comment)">Delete</button>
+
+					</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</div>
+
+</div>

@@ -1,13 +1,13 @@
-angular.module('InstagramModule',['ApiModelV1Module'])
-.service('InstagramSVC',['ApiModelV1','$timeout',function(ApiModelV1,$timeout){
+angular.module('CommentModule',['ApiModelV1Module'])
+.service('CommentSVC',['ApiModelV1','$timeout',function(ApiModelV1,$timeout){
 
-	this.instagrams = {
+	this.comments = {
 
 		loading: {},
 
 		key: {},
 
-		list: [],
+		list: {},
 
 		meta: {},
 
@@ -30,16 +30,18 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 			t.loading.get = true;
 
 			var options = {
-				one: 'instagrams'
+				one: 'comments'
 			};
 
 			options = $.extend(options,t.input);
 
 			ApiModelV1.query(options,function(data){
 
-				angular.forEach(data.instagrams,function(val,key){
+				angular.forEach(data.comments,function(val,key){
 
-					t.list.push(t.new(val));
+					if (!t.list[val.section]){t.list[val.section] = [];}
+					
+					t.list[val.section].push(t.new(val));
 					t.key[val.id] = t.new(val);
 
 				});
@@ -48,7 +50,7 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 				
 				delete t.loading.get;
 
-				if (complete){complete(t.list,false);}
+				if (complete){complete(t.list[val.section],false);}
 
 			},function(data){
 
@@ -76,13 +78,13 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 			obj.loading = true;
 
 			var options = {
-				one: 'instagrams',
+				one: 'comments',
 				id: id
 			};
 
 			ApiModelV1.get(options,function(data){
 
-				var u = t.new(data.instagram);
+				var u = t.new(data.comment);
 
 				angular.forEach(u,function(val,key){
 
@@ -92,7 +94,7 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 
 				t.key[obj.id] = obj;
 
-				if (complete){complete(data.instagram,false);}
+				if (complete){complete(data.comment,false);}
 
 				delete obj.loading;
 
@@ -121,7 +123,7 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 			t.loading.get = true;
 
 			var options = {
-				one: 'instagrams'
+				one: 'comments'
 			};
 
 			options = $.extend(options,params);
@@ -131,20 +133,22 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 				var list = [];
 
 				t.key = {};
-				angular.forEach(data.instagram,function(val,key){
+				angular.forEach(data.comments,function(val,key){
 
-					list.push(t.new(val));
+					if (!t.list[val.section]){t.list[val.section] = [];}
+
+					list[val.section].push(t.new(val));
 					t.key[val.id] = t.new(val);
 
 				});
 
-				t.list = list;
+				t.list[val.section] = list;
 				
 				t.meta = data.meta;
 
 				delete t.loading.get;
 
-				if (complete){complete(t.list,false);}
+				if (complete){complete(t.list[val.section],false);}
 
 			},function(data){
 
@@ -186,26 +190,26 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 				var ID = api_module.id;
 
 				var options = {
-					one: 'instagrams',
+					one: 'comments',
 					id: ID
 				};
 
-				var Item = new ApiModelV1({instagram: new_item});
+				var Item = new ApiModelV1({comment: new_item});
 
 				api_module.loading = {};
 				api_module.loading[field] = 1;
 
 				Item.$save(options,function(data){
 
-					api_module.x876[field] = data.instagram[field];
-					api_module[field] = data.instagram[field];
+					api_module.x876[field] = data.comment[field];
+					api_module[field] = data.comment[field];
 
 					api_module.loading[field] = 2;
 					$timeout(function(){
 						delete api_module.loading[field];
 					},2000);
 
-					if (complete){complete(data.instagram,false);}
+					if (complete){complete(data.comment,false);}
 
 				},function(data){
 
@@ -233,10 +237,10 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 				}
 
 				var options = {
-					one: 'instagrams'
+					one: 'comments'
 				};
 
-				var Item = new ApiModelV1({instagram: new_item});
+				var Item = new ApiModelV1({comment: new_item});
 
 				if (ID){
 
@@ -254,13 +258,13 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 						t.key[api_module.id] = api_module;
 						t.key[ID].id = ID;
 
-						angular.forEach(data.instagram,function(val,key){
+						angular.forEach(data.comment,function(val,key){
 
 							api_module[key] = val;
 
 						});
 
-						if (complete){complete(data.instagram,false);}
+						if (complete){complete(data.comment,false);}
 
 					},function(data){
 
@@ -279,7 +283,7 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 
 					Item.$create(options,function(data){
 
-						angular.forEach(data.instagram,function(val,key){
+						angular.forEach(data.comment,function(val,key){
 
 							api_module[key] = val;
 
@@ -287,10 +291,12 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 
 						delete api_module.loading;
 
-						t.list.unshift(api_module);
+						if (!t.list[api_module.section]){t.list[api_module.section] = [];}
+
+						t.list[api_module.section].unshift(api_module);
 						t.key[api_module.id] = api_module;
 
-						if (complete){complete(data.instagram,false);}
+						if (complete){complete(data.comment,false);}
 
 					},function(data){
 
@@ -311,13 +317,15 @@ angular.module('InstagramModule',['ApiModelV1Module'])
 				api_module.loading = true;
 
 				var options = {
-					one: 'instagrams',
+					one: 'comments',
 					id: api_module.id
 				};
 
 				ApiModelV1.destroy(options,function(data){
 
-					t.list.removeWhere('id',api_module.id);
+					if (!t.list[val.section]){t.list[val.section] = [];}
+
+					t.list[val.section].removeWhere('id',api_module.id);
 
 					delete api_module.loading;
 

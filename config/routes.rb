@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     namespace :v1 do
 
       # API INSERT
+			resources :comment,path: 'comments'
 			resources :user,path: 'users'
 
     end

@@ -14,19 +14,12 @@ App.config(['$httpProvider',function($httpProvider){
 // API
 // ======================================================================
 // ======================================================================
-angular.module('APIModule',['BlankModule','InstagramModule','ScoreModule','TeetimeModule','GenerateModule','CourseModule','RoundModule','UserModule','Event_userModule','EventModule'])
-.service('API',['BlankSVC','InstagramSVC','ScoreSVC','TeetimeSVC','GenerateSVC','CourseSVC','RoundSVC','UserSVC','Event_userSVC','EventSVC',function(BlankSVC,InstagramSVC,ScoreSVC,TeetimeSVC,GenerateSVC,CourseSVC,RoundSVC,UserSVC,Event_userSVC,EventSVC){
+angular.module('APIModule',['BlankModule','CommentModule','UserModule'])
+.service('API',['BlankSVC','CommentSVC','UserSVC',function(BlankSVC,CommentSVC,UserSVC){
 
 	// INSERT HERE
-	this.instagrams = InstagramSVC.instagrams;
-	this.scores = ScoreSVC.scores;
-	this.teetimes = TeetimeSVC.teetimes;
-	this.generate = GenerateSVC;
-	this.courses = CourseSVC.courses;
-	this.rounds = RoundSVC.rounds;
+	this.comments = CommentSVC.comments;
 	this.users = UserSVC.users;
-	this.event_users = Event_userSVC.event_users;
-	this.events = EventSVC.events;
 
 }]);
 // Placemarker
