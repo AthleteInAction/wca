@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'strategy',to: 'strategy#index',as: 'strategy'
+  get 'strategy/forecheck',to: 'strategy#forecheck'
 
   get 'dashboard',to: 'dashboard#index',as: 'dashboard'
 

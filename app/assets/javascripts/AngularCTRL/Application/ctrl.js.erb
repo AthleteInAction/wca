@@ -6,6 +6,10 @@ var Ctrl = ['$scope','API',
 
 		var scope = $scope;
 
+		scope.hash = location.hash.replace('#','');
+
+		scope.tt = 'aa';
+
 		scope.timezone = jstz.determine();
 
 		scope.loaded = true;

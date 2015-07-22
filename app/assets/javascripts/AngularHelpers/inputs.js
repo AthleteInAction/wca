@@ -85,7 +85,8 @@ App.directive('comments',['ApiModelV1',function(ApiModelV1){
 
         restrict: 'E',
         scope: {
-            section: '@'
+            section: '@',
+            addon: '='
         },
         templateUrl: '/angularjs/templates/comments.html',
         link: function(scope,element,attrs){
