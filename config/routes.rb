@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
   get 'strategy',to: 'strategy#index',as: 'strategy'
-  get 'strategy/forecheck',to: 'strategy#forecheck'
+    get 'strategy/forecheck',to: 'strategy#forecheck'
+    get 'strategy/entry',to: 'strategy#entry'
+    get 'strategy/odd-man-rush',to: 'strategy#odd_man_rush'
+    get 'strategy/powerplay',to: 'strategy#powerplay'
+    get 'strategy/breakout',to: 'strategy#breakout'
 
   get 'dashboard',to: 'dashboard#index',as: 'dashboard'
 

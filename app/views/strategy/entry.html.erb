@@ -1,0 +1,141 @@
+<ol class="breadcrumb">
+	<li>
+		<%= link_to 'Home',root_path %>
+	</li>
+	<li>
+		<%= link_to 'Strategy',strategy_path %>
+	</li>
+	<li class="active">Entry</li>
+</ol>
+
+<nav>
+	<ul class="pager">
+		<li class="previous"><a href="<%= strategy_path %>"><span aria-hidden="true">&larr;</span> Back</a></li>
+	</ul>
+</nav>
+
+<div class="list-group">
+
+	<div class="list-group-item">
+
+		<ul class="nav nav-pills">
+			<li role="presentation"><a href="/strategy/breakout">Breakout</a></li>
+			<li role="presentation" class="active"><a href="/strategy/entry">Entry</a></li>
+			<li role="presentation"><a href="/strategy/forecheck">Forecheck</a></li>
+			<li role="presentation"><a href="/strategy/powerplay">Powerplay</a></li>
+			<li role="presentation"><a href="/strategy/odd-man-rush">Odd Man Rush</a></li>
+		</ul>
+
+	</div>
+
+</div>
+
+<div class="list-group">
+
+	<div class="list-group-item active">
+
+		<h2 class="list-group-item-heading">Entry</h2>
+
+	</div>
+
+	<div class="list-group-item">
+
+		<p>Keeping speed through the neutral zone is the goal.</p>
+
+	</div>
+
+</div>
+
+<tabset>
+
+	<tab heading="Rim Around" active="tab.rim_around">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">Rim Around</h3>
+
+				<p>In this scenario the puck is pushed up the right side to blue. D #1 is being aggressive and steps up to challenge blue outside the blue line. Note how blue comes back to the puck slightly to give himself some room to operate.</p>
+
+				<p>Blue is looking to see what D #2 does. Here D #2 takes away blue's direct passing option to red. This is an extremely aggressive approach by the defense. Since red is taken away, blue rims the puck around the boards hard where there is no defender to beat green to the puck.</p>
+
+				<p>Red is anticipating recieving a pass, or if there is no pass, red should keep skating expecting a short chip to the right wing's side boards. Neither of those options are used in this scenario.</p>
+
+				<p>Green must also payattention to what D #2 is doing so he can anticipate the rim around. Green must keep his speed up trusting that blue will know to rim the puck around.</p>
+
+				<p>Once green retrieves the puck, he will be under significant pressure. To relieve pressure green can rim the puck quickly back to blue along the boards. If D #4 trys to pressure green, green can make the easy pass to yellow.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('entry-2-strong-side.gif'),target: '_blank' do %>
+					<%= image_tag 'entry-2-strong-side.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+			</div>
+
+			<comments section="entry_rim_around"></comments>
+
+		</div>
+
+	</tab>
+
+	<tab heading="Short Chip" active="tab.short_chip">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">Short Chip</h3>
+
+				<p>This scenario is the same, defensively, as the first. This time blue, again, see's that D #2 is stepping up to red, so blue chips (saucers) the puck to the short side boards.</p>
+
+				<p>Red has full momentum into the zone. D #2 has momentum towards red. When red doesn't receive the puck, red should be able to blow by D #2 to reteive the puck on the short side boards.</p>
+
+				<p>Once red retrieves the puck, he will be under significant pressure. To relieve pressure red can rim the puck quickly over to green along the boards.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('entry-2-chip.gif'),target: '_blank' do %>
+					<%= image_tag 'entry-2-chip.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+			</div>
+
+			<comments section="entry_rim_around"></comments>
+
+		</div>
+
+	</tab>
+
+</tabset>
+
+<div class="list-group">
+
+	<div class="list-group-item">
+
+		<ul class="nav nav-pills">
+			<li role="presentation"><a href="/strategy/breakout">Breakout</a></li>
+			<li role="presentation" class="active"><a href="/strategy/entry">Entry</a></li>
+			<li role="presentation"><a href="/strategy/forecheck">Forecheck</a></li>
+			<li role="presentation"><a href="/strategy/powerplay">Powerplay</a></li>
+			<li role="presentation"><a href="/strategy/odd-man-rush">Odd Man Rush</a></li>
+		</ul>
+
+	</div>
+
+</div>
+
+<nav>
+	<ul class="pager">
+		<li class="previous"><a href="<%= strategy_path %>"><span aria-hidden="true">&larr;</span> Back</a></li>
+	</ul>
+</nav>

@@ -2,7 +2,9 @@ class AngularjsController < ApplicationController
 
 	def index
 
-		list = ['new_round','teetime_generator','scorecard','comments']
+		list = [
+			'comments'
+		]
 
 		page = params[:page] if list.include?(params[:page])
 

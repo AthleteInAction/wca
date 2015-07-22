@@ -1,0 +1,101 @@
+<ol class="breadcrumb">
+	<li>
+		<%= link_to 'Home',root_path %>
+	</li>
+	<li>
+		<%= link_to 'Strategy',strategy_path %>
+	</li>
+	<li class="active">Odd Man Rush</li>
+</ol>
+
+<nav>
+	<ul class="pager">
+		<li class="previous"><a href="<%= strategy_path %>"><span aria-hidden="true">&larr;</span> Back</a></li>
+	</ul>
+</nav>
+
+<div class="list-group">
+
+	<div class="list-group-item">
+
+		<ul class="nav nav-pills">
+			<li role="presentation"><a href="/strategy/breakout">Breakout</a></li>
+			<li role="presentation"><a href="/strategy/entry">Entry</a></li>
+			<li role="presentation"><a href="/strategy/forecheck">Forecheck</a></li>
+			<li role="presentation"><a href="/strategy/powerplay">Powerplay</a></li>
+			<li role="presentation" class="active"><a href="/strategy/odd-man-rush">Odd Man Rush</a></li>
+		</ul>
+
+	</div>
+
+</div>
+
+<div class="list-group">
+
+	<div class="list-group-item active">
+
+		<h2 class="list-group-item-heading">Odd Man Rush</h2>
+
+	</div>
+
+	<!-- <div class="list-group-item">
+
+		<p>Keeping speed through the neutral zone is the goal.</p>
+
+	</div> -->
+
+</div>
+
+<tabset>
+
+	<tab heading="3 on 2: A" active="tab.3_2_a">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">3 on 2: A</h3>
+
+				<p>The puck is passed wide to a wing (Green). One defender must pickup the puck or the puck carrier (Green) will get an easy shot. The middle man (Red) drives the opposite post occupying the second defender. The opposite wide man (Blue) slides in to the open area behind the middle man (Red) looking to shoot.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('3-on-2.gif'),target: '_blank' do %>
+					<%= image_tag '3-on-2.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+			</div>
+
+			<comments section="odd_man_rush_3_2_a"></comments>
+
+		</div>
+
+	</tab>
+
+</tabset>
+
+<div class="list-group">
+
+	<div class="list-group-item">
+
+		<ul class="nav nav-pills">
+			<li role="presentation"><a href="/strategy/breakout">Breakout</a></li>
+			<li role="presentation"><a href="/strategy/entry">Entry</a></li>
+			<li role="presentation"><a href="/strategy/forecheck">Forecheck</a></li>
+			<li role="presentation"><a href="/strategy/powerplay">Powerplay</a></li>
+			<li role="presentation" class="active"><a href="/strategy/odd-man-rush">Odd Man Rush</a></li>
+		</ul>
+
+	</div>
+
+</div>
+
+<nav>
+	<ul class="pager">
+		<li class="previous"><a href="<%= strategy_path %>"><span aria-hidden="true">&larr;</span> Back</a></li>
+	</ul>
+</nav>

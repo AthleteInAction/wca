@@ -1,0 +1,436 @@
+<ol class="breadcrumb">
+	<li>
+		<%= link_to 'Home',root_path %>
+	</li>
+	<li>
+		<%= link_to 'Strategy',strategy_path %>
+	</li>
+	<li class="active">Breakout</li>
+</ol>
+
+<nav>
+	<ul class="pager">
+		<li class="previous"><a href="<%= strategy_path %>"><span aria-hidden="true">&larr;</span> Back</a></li>
+	</ul>
+</nav>
+
+<div class="list-group">
+
+	<div class="list-group-item">
+
+		<ul class="nav nav-pills">
+			<li role="presentation" class="active"><a href="/strategy/breakout">Breakout</a></li>
+			<li role="presentation"><a href="/strategy/entry">Entry</a></li>
+			<li role="presentation"><a href="/strategy/forecheck">Forecheck</a></li>
+			<li role="presentation"><a href="/strategy/powerplay">Powerplay</a></li>
+			<li role="presentation"><a href="/strategy/odd-man-rush">Odd Man Rush</a></li>
+		</ul>
+
+	</div>
+
+</div>
+
+<div class="list-group">
+
+	<div class="list-group-item active">
+
+		<h2 class="list-group-item-heading">Breakout</h2>
+
+	</div>
+
+	<div class="list-group-item">
+
+		<p>The breakout, much like most aspects of hockey is all about creating angles and speed. In an ideal situation, we would like to bring the puck up the ice through the middle. This keeps the defensemen from using the boards as an extra defender. From the middle of the ice we can go any direction. From the left boards, we can only go right, and from the right boards, we can only go left. The middle of the ice is also the best place to score from in the offensive zone.</p>
+
+	</div>
+
+</div>
+
+<tabset>
+
+	<tab heading="D to D" active="tab.d_to_d">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">D to D</h3>
+
+				<p>Here Teal starts skating up the right looking to get the puck up the middle to Red. The passing lane to Red is not there. Teal see's Green but notices that D #3 and D #5 are closing in on Green. To create an angle to pass to Red up the middle, Teal makes a D to D pass to Yellow. With the forecheckers on the left side of the ice, Yellow now has 2 easy options to Blue and Red, who now have time and space to make a play through the neutral zone.</p>
+
+				<h4>Keys</h4>
+				<ul>
+					<li>Yellow and Teal must always support each other. Typically while the puck carrying D Man (Teal) is looking for options, the supporting D Man (Yellow in this case) stays at or below the level of the puck carrying D Man (Teal). This gives teal the option for a D to D pass.</li>
+					<li>The FWD's must understand this concept so they know what the defensemens options are, as well as be anticipating a D to D pass.</li>
+				</ul>
+
+				<h4>Dont's</h4>
+				<ul>
+					<li><b>Do not</b> leave your D partner hanging in your own zone. This will put enormous pressure on him to make a miracle play to get the puck up the ice. This situation can lean to bad turnovers that are probable the othe D man's fault for not supporting.</li>
+				</ul>
+
+				<h4>Notes</h4>
+				<ul>
+					<li>The D to D pass can also be made behind the net if necessary.</li>
+				</ul>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('breakout-d-to-d-A.gif'),target: '_blank' do %>
+					<%= image_tag 'breakout-d-to-d-A.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+			</div>
+
+			<comments section="breakout_d_to_d"></comments>
+
+		</div>
+
+	</tab>
+
+	<tab heading="Using the Net" active="tab.using_the_net">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">Using the Net</h3>
+
+				<p>It can be very useful to use the net as a safety area for puck control. When the decision is made to use the net, it is important that the puck carrier as well as his teammates know what all the options are.</p>
+
+				<h4>Keys</h4>
+				<ul>
+					<li>The wings must understand that the puck carrier's safety option if under pressure is to rim the puck up either boards. Both wings must be there when the puck gets there. Note how Blue and Green also keep inside position on D #4 and D #5.</li>
+					<li>The supporting D Man should be on the boards, preferably near the goaline, but no higher than the first hash mark.</li>
+				</ul>
+
+				<h4>Reads</h4>
+				<ul>
+					<li>If the puck carrier can get a forechecker to chase hime around the net, it should lead to an easy breakout.</li>
+					<li>If the puck carrier has 2 forecheckers chase behind the net, he must rim the puck up the boards, knowing the wings will be there, on time to avoid a turnover deep in the zone.</li>
+				</ul>
+
+				<h4>Dont's</h4>
+				<ul>
+					<li>The wings <b>CANNOT</b> allow the oppositions point men to gain inside position on them. When our defensemen send the puck up the boards, this will end in a turnover creating a golden scoring chance.</li>
+				</ul>
+
+				<tabset>
+
+					<tab heading="Scenario 1">
+
+						<div class="list-group tabbed">
+
+							<div class="list-group-item">
+
+								<p>In this scenario, Teal hides behind the net, weighing his options, and reading what the forecheckers are doing.</p>
+
+								<p>There is no passing lane to Red, and D #1 is keeping Teal from skating out from behind the net, so Teal's immediate options are a D to D pass to Yellow, or rimming the puck up to Blue or Green.</p>
+
+								<p>Teal decides to pass D to D to Yellow, creating angles for Yellow to pass to Red or Blue, or just dump the puck out of the zone if needed.</p>
+
+								<p>As Yellow passes to Blue, this allows Red to build speed up the ice. If Red is open, Blue can make a direct pass to Red. If D #5 takes away Red, Blue can make a cross ice pass to Green (if he thinks it's safe), or saucer chip up the left boards where Red or Green should be able to win the race to the puck.</p>
+
+								<br>
+
+								<div align="center">
+									<%= link_to asset_path('breakout-d-to-d-behind-net-A.gif'),target: '_blank' do %>
+									<%= image_tag 'breakout-d-to-d-behind-net-A.gif',class: 'img-responsive' %>
+									<% end %>
+								</div>
+
+								<br>
+
+							</div>
+
+						</div>
+
+					</tab>
+
+				</tabset>
+
+			</div>
+
+			<comments section="breakout_using_the_net"></comments>
+
+		</div>
+
+	</tab>
+
+	<tab heading="D to D Underneeth" active="tab.d_to_d_underneeth">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">D to D Underneeth</h3>
+
+				<p>This first example starts in your own d-zone with a significant amount of time for the defensemen to work with. The puck carrying defenseman starts by moving up the ice at an angle drawing the defense to one side of the ice. The supporting defenseman slides underneath the puck carrier creating and angle for a "reverse pass". Once the "reverse pass" is completed, with the defense drawn to one side of the ice, this should give the supporting defensemen time, speed, and momentum to make a play up the ice.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('d-back-pass.gif'),target: '_blank' do %>
+					<%= image_tag 'd-back-pass.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+				<tabset>
+
+					<tab>
+
+						<tab-heading>Defensemen</tab-heading>
+
+						<table class="table table-bordered no-top">
+							<tbody>
+								<tr>
+									<td>
+
+										<p>The key is for both defensemen to support eachother. As one d-man starts up the ice, looking for options, the other d-man should always create an option to reverse the puck and start the breakout in the opposite direction.</p>
+
+										<p>In the above example, yellow starts up the ice, at an angle, drawing the defense to one side of the ice. He then reverses the puck to teal, which gives the entire breakout time to build momentum up the ice.</p>
+
+										<div class="row">
+
+											<div class="col-md-6">
+												<h4>Options:</h4>
+												<ul>
+													<li>Pass to a forward who has time to make a play. (Do not pass your forwards into a big hit which can cause a bad turnover)</li>
+													<li>Skate the puck into the zone, inheriting the risk that if you turn it over it will most likely end up in an odd man opportunity, or breakaway the other way.</li>
+													<li>Dump the puck into the zone</li>
+													<li>Reverse the puck to your D partner to start the breakout in the opposite direction</li>
+												</ul>
+											</div>
+
+											<div class="col-md-6">
+												<h4>Expectations:</h4>
+												<ul>
+													<li>Put your forwards in positions to make plays, not turnovers.</li>
+													<li>If you are going to dump the puck in, do it high at the redline. This will allow the forwards to keep their speed into the zone. If you skate passed the redline, it will be presumed that you are skating into the zone, or rimming the puck around the boards.
+													</li>
+												</ul>
+											</div>
+
+										</div>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</tab>
+
+					<tab>
+
+						<tab-heading>Center</tab-heading>
+
+						<table class="table table-bordered no-top">
+							<tbody>
+								<tr>
+									<td>
+
+										<p>The center will be skating on 45&deg; lines up the ice presenting himself as an option for the defensemen.</p>
+
+										<div class="row">
+
+											<div class="col-md-6">
+												<h4>Options:</h4>
+												<ul>
+													<li>Direct pass to either wing</li>
+													<li>Shoot the puck on net creating a wide rebound for the wings to retrieve</li>
+													<li>Saucer pass wide for the wings to retrieve</li>
+													<li>Skate the puck deep into the zone</li>
+												</ul>
+											</div>
+
+											<div class="col-md-6">
+												<h4>Expectations:</h4>
+												<ul>
+													<li><b>Get the puck deep into the zone</b>. Turning the puck over on entry is unacceptable</li>
+													<li>The defensemen must trust that you are not going to turn the puck over upon entry so they can join in the offensive zone</li>
+												</ul>
+											</div>
+
+										</div>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</tab>
+
+					<tab>
+
+						<tab-heading>Wings</tab-heading>
+
+						<table class="table table-bordered no-top">
+							<tbody>
+								<tr>
+									<td>
+
+										<p>The wings need to stay wide to keep the defense spread out. Be sure not to get too close to the blue line before receiving the puck from your defensemen. This will give you a buffer to keep the opposing defensemen from aggressively stepping up on you. Once the puck is advanced to a forward, get your feet moving into the zone.</p>
+
+										<div class="row">
+
+											<div class="col-md-6">
+												<h4>Options:</h4>
+												<ul>
+													<li>Direct pass to the wing or center</li>
+													<li>Drop pass to incoming defensemen</li>
+													<li>Shoot the puck on net creating a wide rebound for the wing or center to retrieve</li>
+													<li>Rim the puck around the boards</li>
+													<li>Skate the puck deep into the zone</li>
+												</ul>
+											</div>
+
+											<div class="col-md-6">
+												<h4>Expectations:</h4>
+												<ul>
+													<li><b>Get the puck deep into the zone</b>. Turning the puck over on entry is unacceptable</li>
+													<li>Be there when the opposite wing rims the puck around the boards.</li>
+													<li>The defensemen must trust that you are not going to turn the puck over upon entry so they can join in the offensive zone</li>
+												</ul>
+											</div>
+
+										</div>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</tab>
+
+				</tabset>
+
+			</div>
+
+			<comments section="breakout_d_to_d_underneeth"></comments>
+
+		</div>
+
+	</tab>
+
+	<tab heading="D to D Rotating" active="tab.d_to_d_rotating">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">D to D Rotating</h3>
+
+				<p>This example starts in your own d-zone with a significant amount of time for the defensemen to work with. The defensemen are looking to pass wide D to D. When the D makes the pass, the wing on the side of the passing d-man, sweeps up the middle of the ice assuming the center's position. The player last playing the center position assumes the wing's position. This can continue forever until something opens up.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('breakout-rotating-standard.gif'),target: '_blank' do %>
+					<%= image_tag 'breakout-rotating-standard.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+				<tabset>
+
+					<tab>
+
+						<tab-heading>Defensemen</tab-heading>
+
+						<table class="table table-bordered no-top">
+							<tbody>
+								<tr>
+									<td>
+
+										<p>Both defensemen need to stay wide and present an option for a D to D pass. When the opportuniy presents itself, make the pass to a forward. The key is patience. This is designed for teams clogging the neutral zone.</p>
+
+										<div class="row">
+
+											<div class="col-md-6">
+												<h4>Options:</h4>
+												<ul>
+													<li>Pass to a forward who has time to make a play. (Do not pass your forwards into a big hit which can cause a bad turnover)</li>
+													<li>Skate the puck into the zone, inheriting the risk that if you turn it over it will most likely end up in an odd man opportunity, or breakaway the other way.</li>
+													<li>Dump the puck into the zone</li>
+													<li>Reverse the puck to your D partner to start the breakout in the opposite direction</li>
+												</ul>
+											</div>
+
+											<div class="col-md-6">
+												<h4>Expectations:</h4>
+												<ul>
+													<li>Put your forwards in positions to make plays, not turnovers.</li>
+													<li>If you are going to dump the puck in, do it high at the redline. This will allow the forwards to keep their speed into the zone. If you skate passed the redline, it will be presumed that you are skating into the zone, or rimming the puck around the boards.
+													</li>
+												</ul>
+											</div>
+
+										</div>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</tab>
+
+					<tab>
+
+						<tab-heading>Forwards</tab-heading>
+
+						<table class="table table-bordered no-top">
+							<tbody>
+								<tr>
+									<td>
+
+										<p>All three forward positions are interchangeable in this breakout. Timing is key.</p>
+
+									</div>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</tab>
+
+			</tabset>
+
+		</div>
+
+		<comments section="breakout_d_to_d_rotating"></comments>
+
+	</div>
+
+</tab>
+
+</tabset>
+
+<div class="list-group">
+
+	<div class="list-group-item">
+
+		<ul class="nav nav-pills">
+			<li role="presentation" class="active"><a href="/strategy/breakout">Breakout</a></li>
+			<li role="presentation"><a href="/strategy/entry">Entry</a></li>
+			<li role="presentation"><a href="/strategy/forecheck">Forecheck</a></li>
+			<li role="presentation"><a href="/strategy/powerplay">Powerplay</a></li>
+			<li role="presentation"><a href="/strategy/odd-man-rush">Odd Man Rush</a></li>
+		</ul>
+
+	</div>
+
+</div>
+
+<nav>
+	<ul class="pager">
+		<li class="previous"><a href="<%= strategy_path %>"><span aria-hidden="true">&larr;</span> Back</a></li>
+	</ul>
+</nav>

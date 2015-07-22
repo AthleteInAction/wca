@@ -1,0 +1,292 @@
+<ol class="breadcrumb">
+	<li>
+		<%= link_to 'Home',root_path %>
+	</li>
+	<li>
+		<%= link_to 'Strategy',strategy_path %>
+	</li>
+	<li class="active">Powerplay</li>
+</ol>
+
+<nav>
+	<ul class="pager">
+		<li class="previous"><a href="<%= strategy_path %>"><span aria-hidden="true">&larr;</span> Back</a></li>
+	</ul>
+</nav>
+
+<div class="list-group">
+
+	<div class="list-group-item">
+
+		<ul class="nav nav-pills">
+			<li role="presentation"><a href="/strategy/breakout">Breakout</a></li>
+			<li role="presentation"><a href="/strategy/entry">Entry</a></li>
+			<li role="presentation"><a href="/strategy/forecheck">Forecheck</a></li>
+			<li role="presentation" class="active"><a href="/strategy/powerplay">Powerplay</a></li>
+			<li role="presentation"><a href="/strategy/odd-man-rush">Odd Man Rush</a></li>
+		</ul>
+
+	</div>
+
+</div>
+
+<div class="list-group">
+
+	<div class="list-group-item active">
+
+		<h2 class="list-group-item-heading">Powerplay</h2>
+
+	</div>
+
+	<div class="list-group-item">
+
+		<p>All positions are pretty much interchangeable on the powerplay. Think of each color as spots, everyone should be able to play any spot.</p>
+
+		<h4>Important Concepts</h4>
+
+		<p>We are out numbering the defense high in the zone. Red, Teal and Blue have 2 defenders defending them. This is our point of puck control. In theory we should be able to hold the puck between the 3 of them for the entire powerplay if we chose not to shoot. We must know our options to relieve pressure for aggressive penalty killers. Do not panick, find the open man to relieve pressure.</p>
+
+		<p>Yellow should postion himself medium to high in the slot. Do not get too close to the goalie where you are not a passing option. This will also give you a better angle for a potential one timer.</p>
+
+		<h4>Keys</h4>
+		<ul>
+			<li>Moving the puck from one side of the ice to another will create openings to look for our powerplay options</li>
+			<li>Not trying to force centering passes to guarded teammates</li>
+			<li>Keeping the puck moving to all teammates</li>
+		</ul>
+
+	</div>
+
+</div>
+
+<tabset>
+
+	<tab heading="Slot One-T" active="tab.slot_one_t">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">Slot One-T</h3>
+
+				<p>The first option is simple. We are trying to draw defender #4 low to open a one-T for yellow. See other options for counters.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('pp-umbrella-low-slot.gif'),target: '_blank' do %>
+					<%= image_tag 'pp-umbrella-low-slot.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+			</div>
+
+			<comments section="powerplay_slot_one_t"></comments>
+
+		</div>
+
+	</tab>
+
+	<tab heading="Cross Crease" active="tab.cross_crease">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">Cross Crease</h3>
+
+				<p>Defender #4 draws to green, defender #3 takes away the one-T for yellow, blue slides in backdoor where defender #3 was.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('pp-umbrella-low-slot-counter-1.gif'),target: '_blank' do %>
+					<%= image_tag 'pp-umbrella-low-slot-counter-1.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+			</div>
+
+			<comments section="powerplay_cross_crease"></comments>
+
+		</div>
+
+	</tab>
+
+	<tab heading="Relay" active="tab.relay">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">Relay</h3>
+
+				<p>Defender #4 draws to green, defender #3 takes away blue, defender #1 takes away yellow. Relay back to red then teal to look for the shot.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('pp-umbrella-low-slot-counter-2.gif'),target: '_blank' do %>
+					<%= image_tag 'pp-umbrella-low-slot-counter-2.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+			</div>
+
+			<comments section="powerplay_relay"></comments>
+
+		</div>
+
+	</tab>
+
+	<tab heading="Left One-T" active="tab.left_one_t">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">Left One-T</h3>
+
+				<p>Defender #4 draws to green, defender #3 takes away blue, defender #2 takes away yellow. Pass to red for the shot.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('pp-umbrella-low-slot-counter-3.gif'),target: '_blank' do %>
+					<%= image_tag 'pp-umbrella-low-slot-counter-3.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+			</div>
+
+			<comments section="powerplay_left_one_t"></comments>
+
+		</div>
+
+	</tab>
+
+	<tab heading="Shell Fish" active="tab.shell_fish">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">Shell Fish</h3>
+
+				<p>Defender #4 takes away yellow, defender #3 takes away blue, green takes it to the net.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('pp-umbrella-low-slot-counter-4.gif'),target: '_blank' do %>
+					<%= image_tag 'pp-umbrella-low-slot-counter-4.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+			</div>
+
+			<comments section="powerplay_shell_fish"></comments>
+
+		</div>
+
+	</tab>
+
+	<tab heading="Change Sides" active="tab.change_sides">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">Change Sides</h3>
+
+				<p>Green takes the puck around the net to change sides for the powerplay. Same options available in reverse.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('pp-umbrella-low-slot-counter-5.gif'),target: '_blank' do %>
+					<%= image_tag 'pp-umbrella-low-slot-counter-5.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<br>
+
+			</div>
+
+			<comments section="powerplay_change_sides"></comments>
+
+		</div>
+
+	</tab>
+
+	<tab heading="Releiving Pressure" active="tab.releiving_pressure">
+
+		<div class="list-group tabbed">
+
+			<div class="list-group-item">
+
+				<h3 class="list-group-item-heading">Releiving Pressure</h3>
+
+				<p>In this example the opposition is being aggressive and pressuring the puck hard on the powerplay. It is important that everyone knows what's going to happen in this situation.</p>
+
+				<p>FWD #2 pressure's Red, FWD #1 takes away Teal, D #4 takes away Green, and D# 3 takes away Yellow. Blue is the open man, but with Red being pressured, the passing lanes have been cut off and the pass from Red to Blue becomes a high risk play.</p>
+
+				<p>To releive pressure, Red rims the puck around the boards to Blue. Blue should be anticipating this play when the penalty killers are being that aggressive.</p>
+
+				<p>When the puck gets to Blue, we are now set up in our umbrella powerplay on the other side of the ice. Also note that the defense is now all caught on one side of the ice, forcing them to scramble to get back into position.</p>
+
+				<br>
+
+				<div align="center">
+					<%= link_to asset_path('pp-umbrella-low-slot-pressure.gif'),target: '_blank' do %>
+					<%= image_tag 'pp-umbrella-low-slot-pressure.gif',class: 'img-responsive' %>
+					<% end %>
+				</div>
+
+				<h4>Notes</h4>
+
+				<p>Notice how when Red is being pressured, and D #4 decides to take away Green. Green then moves towards the slot area slightly. This keeps D #4 out of the passing lane for Red to rim around to Blue. <b>Green should not move below the goaline if D #4 decides to take away Green.</b></p>
+
+				<p>Also note how Yellow stars close to the net as the puck is high in the zone. As the puck moves lower in the zone, Yellow moves higher in the slot, away from the net, to create an angle for a one-T from Red or Green. When the puck is high, Yellow trys to screen the goalie. When the puck is low, Yellow moves to create an angle for a one-T near the slot.</p>
+
+			</div>
+
+			<comments section="powerplay_releiving_pressure"></comments>
+
+		</div>
+
+	</tab>
+
+</tabset>
+
+<div class="list-group">
+
+	<div class="list-group-item">
+
+		<ul class="nav nav-pills">
+			<li role="presentation"><a href="/strategy/breakout">Breakout</a></li>
+			<li role="presentation"><a href="/strategy/entry">Entry</a></li>
+			<li role="presentation"><a href="/strategy/forecheck">Forecheck</a></li>
+			<li role="presentation" class="active"><a href="/strategy/powerplay">Powerplay</a></li>
+			<li role="presentation"><a href="/strategy/odd-man-rush">Odd Man Rush</a></li>
+		</ul>
+
+	</div>
+
+</div>
+
+<nav>
+	<ul class="pager">
+		<li class="previous"><a href="<%= strategy_path %>"><span aria-hidden="true">&larr;</span> Back</a></li>
+	</ul>
+</nav>

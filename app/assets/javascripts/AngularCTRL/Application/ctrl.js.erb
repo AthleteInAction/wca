@@ -8,7 +8,8 @@ var Ctrl = ['$scope','API',
 
 		scope.hash = location.hash.replace('#','');
 
-		scope.tt = 'aa';
+		scope.tab = {};
+		scope.tab[scope.hash] = true;
 
 		scope.timezone = jstz.determine();
 
