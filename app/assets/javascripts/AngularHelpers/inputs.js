@@ -79,6 +79,20 @@ App.directive('animate',function(){
     }
 });
 
+App.directive('soundcloud',function(){
+    return {
+
+        restrict: 'E',
+        scope: {},
+        link: function(scope,element,attrs){
+
+            
+
+        }
+
+    }
+});
+
 
 App.directive('comments',['ApiModelV1',function(ApiModelV1){
     return {

@@ -44,23 +44,42 @@
 
 	<div class="container" ng:show="loaded">
 
-		<script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>
+		<!--<script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>-->
 
-		<script>
-
-		SC.initialize({
-
-			client_id: '4d0e36fdbe21f60751fa33f6c3ab37b9'
-
-		});
-		SC.stream("/tracks/51126400", function(sound){
-			sound.play();
-		});
-		</script>
+		<!-- <soundcloud></soundcloud> -->
 
 		<% flash.each do |type,message| %>
 		<alert type="<%= type %>"><%= message %></alert>
 		<% end %>
+
+		<div plangular="https://soundcloud.com/highbrow-lowstache/the-notorious-b-i-g-machine">
+
+			<div class="alert alert-info forever" role="alert">
+
+				<div class="row">
+					<div class="col-md-12">
+
+						<a href="" ng-click="play()"><%= icon 'step-backward' %></a>
+
+						<a href="" ng-click="play(); playing = true" ng:show="!playing"><%= icon 'play' %></a>
+						<a href="" ng-click="pause(); playing = false" ng:show="playing"><%= icon 'pause' %></a>
+
+						<a href="" ng-click="play()"><%= icon 'step-forward' %></a>
+
+						&nbsp;&nbsp;
+
+						{{ currentTime | hhmmss }}&nbsp;/&nbsp;{{ duration | hhmmss }}
+
+						&nbsp;&nbsp;
+
+						{{track.title}}
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
 
 		<%= yield %>
 
