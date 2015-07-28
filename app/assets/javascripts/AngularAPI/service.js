@@ -14,10 +14,11 @@ App.config(['$httpProvider',function($httpProvider){
 // API
 // ======================================================================
 // ======================================================================
-angular.module('APIModule',['BlankModule','CommentModule','UserModule'])
-.service('API',['BlankSVC','CommentSVC','UserSVC',function(BlankSVC,CommentSVC,UserSVC){
+angular.module('APIModule',['BlankModule','SoundcloudModule','CommentModule','UserModule'])
+.service('API',['BlankSVC','SoundcloudSVC','CommentSVC','UserSVC',function(BlankSVC,SoundcloudSVC,CommentSVC,UserSVC){
 
 	// INSERT HERE
+	this.soundclouds = SoundcloudSVC.soundclouds;
 	this.comments = CommentSVC.comments;
 	this.users = UserSVC.users;
 

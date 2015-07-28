@@ -44,6 +44,20 @@
 
 	<div class="container" ng:show="loaded">
 
+		<script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>
+
+		<script>
+
+		SC.initialize({
+
+			client_id: '4d0e36fdbe21f60751fa33f6c3ab37b9'
+
+		});
+		SC.stream("/tracks/51126400", function(sound){
+			sound.play();
+		});
+		</script>
+
 		<% flash.each do |type,message| %>
 		<alert type="<%= type %>"><%= message %></alert>
 		<% end %>
