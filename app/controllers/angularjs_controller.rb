@@ -3,7 +3,8 @@ class AngularjsController < ApplicationController
 	def index
 
 		list = [
-			'comments'
+			'comments',
+			'soundcloud'
 		]
 
 		page = params[:page] if list.include?(params[:page])

@@ -8,7 +8,7 @@
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 </head>
-<body ng:controller="Ctrl" data-spy="scroll" data-target="#myScrollspy">
+<body ng:controller="Ctrl">
 
 	<nav class="navbar navbar-default">
 		<div class="container">
@@ -46,25 +46,28 @@
 
 		<!--<script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>-->
 
-		<!-- <soundcloud></soundcloud> -->
+		<soundcloud>
+			HELLO! = [{{sound}}]
+		</soundcloud>
 
 		<% flash.each do |type,message| %>
 		<alert type="<%= type %>"><%= message %></alert>
 		<% end %>
 
-		<div plangular="https://soundcloud.com/highbrow-lowstache/the-notorious-b-i-g-machine">
+		<!-- <div plangular="https://soundcloud.com/highbrow-lowstache/the-notorious-b-i-g-machine">
 
 			<div class="alert alert-info forever" role="alert">
 
 				<div class="row">
 					<div class="col-md-12">
 
-						<a href="" ng:click="play()"><%= icon 'step-backward' %></a>
+						<button class="btn btn-default btn-lg" ng:click=""><%= icon 'step-backward' %></button>
 
-						<a href="" ng:click="play(); playing = true" ng:show="!playing"><%= icon 'play' %></a>
-						<a href="" ng:click="pause(); playing = false" ng:show="playing"><%= icon 'pause' %></a>
+						<button class="btn btn-default btn-lg" ng:click="play(); playing = true" ng:show="!playing"><%= icon 'play' %></button>
 
-						<a href="" ng:click="play()"><%= icon 'step-forward' %></a>
+						<button class="btn btn-warning btn-lg" ng:click="pause(); playing = false" ng:show="playing"><%= icon 'pause' %></button>
+
+						<button class="btn btn-default btn-lg" ng:click=""><%= icon 'step-forward' %></button>
 
 						&nbsp;&nbsp;
 
@@ -72,14 +75,14 @@
 
 						&nbsp;&nbsp;
 
-						{{track.title}}
+						<a href="https://soundcloud.com/highbrow-lowstache/the-notorious-b-i-g-machine" target="_blank">{{track.title}}</a>
 
 					</div>
 				</div>
 
 			</div>
 
-		</div>
+		</div> -->
 
 		<%= yield %>
 
