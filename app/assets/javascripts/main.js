@@ -7,15 +7,10 @@ var App = angular.module('App',
 		'ui.bootstrap',
 		'angularFileUpload',
 		'angularNumberPicker',
-		'ui.calendar',
-		'plangular'
+		'ui.calendar'
 	]
 );
 App.value('$anchorScroll',angular.noop);
 $(document).on('ready page:load', function(arguments) {
   angular.bootstrap(document.body, ['App'])
-});
-
-App.config(function(plangularConfigProvider){
-	plangularConfigProvider.clientId = '4d0e36fdbe21f60751fa33f6c3ab37b9';
 });
