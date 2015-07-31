@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  seek_time: 1
+  clock_time: 1
+  track_id: 1
+  playing: false
+
+two:
+  user_id: 1
+  seek_time: 1
+  clock_time: 1
+  track_id: 1
+  playing: false

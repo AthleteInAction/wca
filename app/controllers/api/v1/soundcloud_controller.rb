@@ -30,26 +30,29 @@ module Api
         # }
 
         # create a client object with your app credentials
-        client = Soundcloud.new client_id: '4d0e36fdbe21f60751fa33f6c3ab37b9'
+        
 
-        # fetch track to stream
-        track = client.get '/tracks/48961440'
+        tracks = client.get '/tracks',q: params[:q]
 
-        # # get the tracks streaming URL
-        stream_url = client.get track['stream_url'],allow_redirects: true
-
-        # # print the tracks stream URL
-        puts '==='*10
-        puts '==='*10
-        puts stream_url
-        puts '==='*10
-        puts '==='*10
-
-        render json: track
+        render json: tracks
 
       end
   		# =================================================
   		# =================================================
+
+
+      # TRACKS
+      # =================================================
+      # =================================================
+      def tracks
+
+        tracks = SC.get '/tracks',q: params[:q]
+
+        render json: tracks,root: :tracks
+
+      end
+      # =================================================
+      # =================================================
 
 
   		# GET

@@ -7,10 +7,15 @@ var App = angular.module('App',
 		'ui.bootstrap',
 		'angularFileUpload',
 		'angularNumberPicker',
-		'ui.calendar'
+		'ui.calendar',
+		'mediaPlayer'
 	]
 );
+
 App.value('$anchorScroll',angular.noop);
-$(document).on('ready page:load', function(arguments) {
-  angular.bootstrap(document.body, ['App'])
+
+$(document).on('ready page:load',function(arguments){
+
+	angular.bootstrap(document.body,['App']);
+
 });

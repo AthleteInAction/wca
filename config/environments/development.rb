@@ -25,4 +25,7 @@ Rails.application.configure do
   # ACCESS
   ACCESS = ['end-user','admin']
 
+  # SOUNDCLOUD
+  SC = Soundcloud.new client_id: '4d0e36fdbe21f60751fa33f6c3ab37b9'
+
 end

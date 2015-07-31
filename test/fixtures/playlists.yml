@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  track_id: 1
+  clock_time: 1
+  seek_time: 1
+  order: 1
+  now_playing: false
+  title: MyString
+
+two:
+  user_id: 1
+  track_id: 1
+  clock_time: 1
+  seek_time: 1
+  order: 1
+  now_playing: false
+  title: MyString

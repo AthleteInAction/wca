@@ -1,5 +1,72 @@
-<div>
-	SOUND = {{sound}}<br>
-	HI = {{hi}}<br>
-	TEST = {{test}}<br>
+<audio media-player="audio" data-playlist="API.playlists.list">
+	HELLO THIS IS A TEST
+</audio>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+
+		<div class="row">
+
+			<div class="col-md-6">
+
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search Music" ng:model="search_val" ng:change="search(search_val)" />
+				</div>
+
+				<div class="list-group tabbed no-bottom">
+
+					<a href="" class="list-group-item" ng:repeat="track in tracks | filter:{streamable: true}" ng:click="addToPlaylist(track)">
+
+						{{track.user.username}} - {{track.title}}
+
+					</a>
+
+				</div>
+
+			</div>
+
+			<div class="col-md-6">
+
+				<div class="list-group no-bottom">
+
+					<div class="list-group-item active">
+
+						<h4 class="list-group-item-heading">Queue</h4>
+
+					</div>
+
+					<div class="list-group-item" ng:repeat="track in API.playlists.list">
+
+						<div class="row">
+
+							<div class="col-xs-11">
+
+								<a name="track_{{track.track_id}}"></a>
+								<button class="btn btn-default btn-sm" ng:click="audio.playPause($index)" ng:hide="audio.currentTrack == ($index+1) && audio.playing"><%= icon 'play' %></button>
+								<button class="btn btn-warning btn-sm" ng:click="audio.playPause($index)" ng:show="audio.currentTrack == ($index+1) && audio.playing"><%= icon 'pause' %></button>
+								&nbsp;{{track.username}} - {{track.title}}
+
+							</div>
+							<div class="col-xs-1">
+								<button class="btn btn-danger btn-xs" ng:click="track.delete()"><%= icon 'remove' %></button>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
 </div>
+
+{{API.player.data}}
+
+<div>TIME = {{audio.currentTime}}</div>
+<div>PLAYING = {{audio.playing}}</div>
+<div>MASTER = {{master}}</div>
+<div>Z = {{z}}</div>

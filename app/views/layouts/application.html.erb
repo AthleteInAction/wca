@@ -45,10 +45,9 @@
 	<div class="container" ng:show="loaded">
 
 		<!--<script src="//connect.soundcloud.com/sdk-2.0.0.js"></script>-->
+		<soundcloud></soundcloud>
 
-		<soundcloud>
-			HELLO! = [{{sound}}]
-		</soundcloud>
+		<%= link_to 'IMAGE',asset_path('display-stick-side-A.png'),target: '_blank' %>
 
 		<% flash.each do |type,message| %>
 		<alert type="<%= type %>"><%= message %></alert>

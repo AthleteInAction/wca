@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721144727) do
+ActiveRecord::Schema.define(version: 20150730020751) do
 
   create_table "comments", force: true do |t|
     t.integer  "user_id"
@@ -19,6 +19,21 @@ ActiveRecord::Schema.define(version: 20150721144727) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "playlists", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "track_id"
+    t.integer  "clock_time"
+    t.integer  "seek_time"
+    t.integer  "priority"
+    t.boolean  "now_playing", default: false
+    t.string   "key"
+    t.string   "username"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "src"
   end
 
   create_table "users", force: true do |t|

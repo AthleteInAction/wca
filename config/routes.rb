@@ -29,7 +29,11 @@ Rails.application.routes.draw do
     namespace :v1 do
 
       # API INSERT
-			resources :soundcloud,path: 'soundclouds'
+			resources :player#,path: 'players'
+      put :player,to: 'player#update'
+			resources :playlist,path: 'playlists'
+      get 'soundcloud/tracks',to: 'soundcloud#tracks'
+			resources :soundcloud,path: 'soundcloud'
 			resources :comment,path: 'comments'
 			resources :user,path: 'users'
 
