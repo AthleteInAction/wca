@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :users
   
-  root 'splash#index'
+  root 'dashboard#index'
 
   get '/access/normal',to: 'sessions#new',as: 'login'
   post '/access/normal',to: 'sessions#create',as: 'login_try'
